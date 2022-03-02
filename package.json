@@ -1,0 +1,54 @@
+{
+  "name": "@leecervan/pluto-music",
+  "version": "1.0.0",
+  "description": "A simplify music web-app.",
+  "main": "index.js",
+  "engines": {
+    "node": ">=12",
+    "pnpm": ">=6"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev:h5": "cd packages/h5 && pnpm serve",
+    "dev:web": "cd packages/web && pnpm serve",
+    "prepare": "husky install"
+  },
+  "keywords": [
+    "music",
+    "vue2",
+    "axios"
+  ],
+  "author": "leecervan",
+  "license": "MIT",
+  "dependencies": {
+    "@vue/composition-api": "^1.4.9",
+    "babel-eslint": "^10.1.0",
+    "core-js": "^3.21.1",
+    "dayjs": "^1.10.8",
+    "vue": "2.6",
+    "webpack": "5"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.5",
+    "@babel/eslint-parser": "^7.17.0",
+    "@vue/eslint-config-standard": "^5.1.2",
+    "eslint": "^8.10.0",
+    "eslint-config-prettier": "^8.4.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-monorepo": "^0.3.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-vue": "^8.5.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.4",
+    "node-sass": "4",
+    "prettier": "^2.5.0",
+    "sass-loader": "^12.6.0"
+  },
+  "lint-staged": {
+    "*.{js,vue}": "eslint --fix",
+    "*.{js,css,scss,vue,md}": "prettier --write"
+  }
+}
