@@ -1,4 +1,5 @@
 import axios from 'axios'
+import request from '../../request'
 
 // axios.defaults.baseURL = 'http://47.113.104.231:8000'
 
@@ -25,5 +26,22 @@ export const getBanner = (type = 1) => {
     url: '/api/banner',
     method: 'get',
     params: { type },
+  })
+}
+
+// 首页新碟上架
+export const getNewest = () => {
+  return request({
+    url: '/api/album/newest',
+    method: 'get',
+  })
+}
+
+// PC：首页推荐歌单
+export const getPersonalized = limit => {
+  return request({
+    url: '/api/personalized',
+    method: 'get',
+    params: { limit },
   })
 }

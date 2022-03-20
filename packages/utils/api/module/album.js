@@ -1,4 +1,5 @@
 import axios from 'axios'
+import request from '../../request'
 
 /**
  * 最新专辑
@@ -20,6 +21,19 @@ export const getTopAlbum = ({ limit = 50, offset = 0 } = {}) => {
     url: '/api/top/album',
     method: 'get',
     params: { limit, offset },
+  })
+}
+
+export const getAlbumNew = params => {
+  return request({
+    url: '/api/album/new',
+    method: 'get',
+    params: {
+      area: 'ALL',
+      limit: 35,
+      offset: 0,
+      ...params,
+    },
   })
 }
 

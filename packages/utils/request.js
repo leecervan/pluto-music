@@ -20,7 +20,7 @@ service.interceptors.response.use(
     // console.log('Get response:', response)
     return new Promise(resolve => {
       setTimeout(() => {
-        resolve(response)
+        resolve(response.data)
       }, 1000)
     })
   },
